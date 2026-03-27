@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thị Ngân | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root { --primary: #1e3a8a; --secondary: #3b82f6; --bg: #f8fafc; --text: #1f2937; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* Header */
+        header { border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; }
+        header h1 { color: var(--primary); margin: 0; font-size: 2.5rem; }
+        .contact-bar { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; font-size: 0.9rem; }
+        .contact-bar a { color: var(--text); text-decoration: none; }
+
+        /* Sections */
+        section { margin-bottom: 40px; }
+        h2 { color: var(--primary); border-left: 5px solid var(--primary); padding-left: 15px; text-transform: uppercase; font-size: 1.2rem; margin-bottom: 20px; }
+        
+        /* Education & Projects */
+        .item { margin-bottom: 25px; }
+        .item-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--primary); }
+        .sub-text { color: #6b7280; font-style: italic; margin-bottom: 10px; }
+        
+        /* CÁI ẢNH MÀ M MUỐN ĐÂY */
+        .project-img { 
+            width: 100%; max-width: 300px; border-radius: 10px; 
+            margin: 15px 0; border: 1px solid #ddd; 
+        }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .skill-tag { background: #e2e8f0; padding: 4px 12px; border-radius: 15px; font-size: 0.85rem; display: inline-block; margin: 3px; }
+
+        @media (max-width: 600px) { .item-header { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>NGUYỄN THỊ NGÂN</h1>
+        <p>International Business Student @ Foreign Trade University</p>
+        <div class="contact-bar">
+            <span><i class="fas fa-envelope"></i> nguyenthinganbibi@gmail.com</span>
+            <span><i class="fas fa-phone"></i> 0975 544 721</span>
+            <span><i class="fab fa-github"></i> github.com/nguyenthinganbibi-hash</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am an International Business student at Foreign Trade University (2024–2028). I have a strong interest in import-export and global trade. I am currently developing my skills in market research, data analysis, and foreign languages. I am a responsible, detail-oriented, and fast-learning individual who is eager to gain practical experience.</p>
+    </section>
+
+    <section>
+        <h2>🎓 Education</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Foreign Trade University (FTU)</span>
+                <span>2024 – 2028</span>
+            </div>
+            <div>Major: International Business</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>💼 Projects</h2>
+        
+        <div class="item">
+            <div class="item-header">🌍 English Up! Project (Career Development Skills)</div>
+            <p>Participated in a project aimed at improving professional English communication skills.</p>
+            <ul>
+                <li>Practiced business communication and presentation</li>
+                <li>Developed teamwork and interpersonal skills</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">🍜 Brand Repositioning – Miliket</div>
+            <p>Conducted a marketing project focused on repositioning the Miliket brand.</p>
+            <img src="avatar.jpg" alt="Miliket Project" class="project-img">
+            <ul>
+                <li>Analyzed current brand image and target customers</li>
+                <li>Proposed new branding and marketing strategies</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">🐟 Business Research – Vinh Hoan Corporation</div>
+            <p>Completed a research paper analyzing the business operations.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>🛠 Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <strong>Hard Skills:</strong><br>
+                <span class="skill-tag">MS Excel</span> <span class="skill-tag">Market Research</span>
+                <span class="skill-tag">Business Analysis</span> <span class="skill-tag">PowerPoint</span>
+            </div>
+            <div>
+                <strong>Languages:</strong><br>
+                <span class="skill-tag">English (Working)</span> <span class="skill-tag">Chinese (HSK3)</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎯 Career Objective</h2>
+        <p>I aim to pursue a career in import-export or international business, where I can apply my academic knowledge and continuously develop my professional skills.</p>
+    </section>
+</div>
+
+</body>
+</html>
