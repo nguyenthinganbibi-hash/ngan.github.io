@@ -7,15 +7,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         :root {
-            --rose-dark: #8e6d6d; /* Hồng nâu đậm cho chữ */
-            --rose-mid: #d4a5a5;  /* Hồng Rose nổi bật */
-            --cream: #fff5f5;     /* Kem nền */
+            --rose-dark: #8e6d6d; 
+            --rose-mid: #d4a5a5;  
+            --cream: #fff5f5;     
             --white: #ffffff;
             --text: #4a4a4a;
         }
         
         body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--cream);
             color: var(--text);
             line-height: 1.6;
@@ -25,7 +25,6 @@
 
         .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
 
-        /* Header tinh tế với ảnh tròn phía trên tên */
         header {
             text-align: center;
             padding: 60px 20px;
@@ -36,8 +35,8 @@
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 5px solid var(--cream);
             object-fit: cover;
@@ -55,12 +54,11 @@
 
         header p {
             color: var(--rose-mid);
-            font-weight: 500;
+            font-weight: 600;
             margin-top: 10px;
             font-size: 1.1rem;
         }
 
-        /* Section layout */
         section {
             background: var(--white);
             padding: 35px;
@@ -72,16 +70,83 @@
         h2 {
             color: var(--rose-dark);
             font-size: 1.4rem;
-            border-left: 4px solid var(--rose-mid);
+            border-left: 5px solid var(--rose-mid);
             padding-left: 15px;
             margin-bottom: 25px;
             text-transform: uppercase;
         }
 
-        /* Education & Projects */
-        .info-block { margin-bottom: 20px; }
         .flex-row { display: flex; justify-content: space-between; font-weight: bold; color: var(--rose-dark); }
         
         .project-card {
             border: 1px solid #f0e4e4;
-            padding:
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .project-card:hover { border-color: var(--rose-mid); background: #fffafa; }
+        .project-card h3 { color: var(--rose-mid); margin-top: 0; font-size: 1.15rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .tag-group h4 { margin-bottom: 12px; color: var(--rose-dark); font-size: 1rem; border-bottom: 1px solid var(--cream); padding-bottom: 5px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            background: var(--cream);
+            color: var(--rose-dark);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border: 1px solid var(--rose-mid);
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: var(--rose-dark);
+            color: var(--white);
+            border-radius: 30px;
+        }
+        .footer a { color: var(--white); text-decoration: none; margin: 0 15px; font-weight: 500; font-size: 1.1rem; }
+
+        @media (max-width: 600px) {
+            .flex-row { flex-direction: column; }
+            header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="avatar.jpg" alt="Nguyễn Thị Ngân" class="profile-img">
+        <h1>Nguyễn Thị Ngân</h1>
+        <p>International Business Student | Foreign Trade University</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Nguyễn Thị Ngân, an International Business student at Foreign Trade University (2024–2028). I have a strong interest in import-export and global trade. I am currently developing my skills in market research, data analysis, and foreign languages to prepare for a professional career in international business. I am a responsible, detail-oriented, and fast-learning individual who is eager to gain practical experience in a dynamic working environment.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="info-block">
+            <div class="flex-row">
+                <span>Foreign Trade University (FTU)</span>
+                <span>2024 – 2028</span>
+            </div>
+            <p>Major: International Business</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="project-card">
+            <h3>English Up! Project (Career Development Skills)</h3>
+            <p>Participated in a project aimed at improving professional English communication skills.</p>
+            <ul>
+                <li>Practiced business communication and presentation</li>
+                <li>Developed teamwork and interpersonal
