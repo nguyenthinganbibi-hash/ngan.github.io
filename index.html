@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Thị Ngân | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        /* MÀU SẮC ĐƯỢC CHỌN THEO PHONG CÁCH THANH LỊCH TRONG ẢNH VÍ DỤ */
+        :root {
+            --primary: #523737; /* Màu nâu đậm sang trọng */
+            --secondary: #b08e8e; /* Màu hồng be nhẹ nhàng */
+            --bg: #fdfdfd; /* Màu nền trắng sữa tinh tế */
+            --white: #ffffff;
+            --text: #333333;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Dùng font cổ điển cho sang */
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        /* PHẦN ĐẦU TRANG CÓ ẢNH VÀ TÊN - ĐÚNG Ý MƯA */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #fdfdfd 0%, #fffaf5 100%);
+            border-bottom: 2px solid var(--secondary);
+            margin-bottom: 30px;
+        }
+        
+        /* Khung ảnh đại diện hình tròn, có viền màu sang trọng */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%; /* Làm ảnh hình tròn */
+            border: 5px solid var(--white);
+            object-fit: cover; /* Giúp ảnh không bị méo */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--primary); 
+        }
+        
+        header p { 
+            opacity: 0.9; 
+            font-size: 1.1rem; 
+            margin-top: 10px; 
+            color: var(--primary);
+        }
+
+        /* General Section Style */
+        section {
+            background: var(--white);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
+
+        /* Education & Subheadings */
+        h3 { color: var(--primary); margin-top: 0; }
+        .flex-group { display: flex; justify-content: space-between; align-items: flex-start; }
+        .date { color: #6b7280; font-weight: 600; }
+
+        /* Project Cards */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card {
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        .card:hover { transform: translateY(-3px); border-color: var(--secondary); }
+        .card h4 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .card ul { padding-left: 18px; margin-bottom: 0; font-size: 0.9rem; }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            background: #fdfdfd;
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--secondary);
+        }
+
+        /* Contact Section */
+        .footer { text-align: center; padding: 40px 0; color: #718096; }
+        .btn-contact {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin: 0 10px;
+            border: 2px solid var(--secondary);
+        }
+        .btn-contact:hover { background: var(--secondary); transform: scale(1.05); color: white; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 10px; }
+            section { padding: 20px; }
+            .flex-group { flex-direction: column; }
+            .date { margin-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="avatar.jpg" alt="Nguyễn Thị Ngân Profile" class="profile-img">
+    <div class="profile-info">
+        <h1>NGUYỄN THỊ NGÂN</h1>
+        <p>International Business Student @ Foreign Trade University</p>
+    </div>
+</header>
+
+<div class="container">
+    <section id="about">
+        <h2><i class="fas fa-user-circle"></i> About Me</h2>
+        <p>I am an International Business student at Foreign Trade University (2024–2028). I have a strong interest in import-export and global trade. I am currently developing my skills in market research, data analysis, and foreign languages. I am a responsible, detail-oriented, and fast-learning individual who is eager to gain practical experience.</p>
+    </section>
+
+    <section id="education">
+        <h2><i class="fas fa-graduation-cap"></i> 🎓 Education</h2>
+        <div class="flex-group">
+            <div>
+                <h3>Foreign Trade University (FTU)</h3>
+                <p>Major: International Business</p>
+            </div>
+            <div class="date">2024 – 2028</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2><i class="fas fa-tasks"></i> 💼 Projects</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h4>🌍 English Up! Project</h4>
+                <ul>
+                    <li>Practiced business communication</li>
+                    <li>Developed teamwork skills</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>🍜 Miliket Brand Repositioning</h4>
+                <ul>
+                    <li>Analyzed current brand image</li>
+                    <li>Proposed marketing strategies</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>🐟 Vinh Hoan Corp Research</h4>
+                <ul>
+                    <li>Evaluated company potential</li>
+                    <li>Applied business frameworks</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2><i class="fas fa-tools"></i> 🛠 Skills</h2>
+        <div class="skills-container">
+            <div>
+                <h4 style="margin-bottom: 10px; color: var(--primary);">Hard Skills</h4>
+                <div class="skill-list">
+                    <span class="tag">Excel</span>
+                    <span class="tag">Market Research</span>
+                    <span class="tag">Business Analysis</span>
+                    <span class="tag">PowerPoint</span>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 10px; color: var(--primary);">Languages</h4>
+                <div class="skill-list">
+                    <span class="tag">English (Working)</span>
+                    <span class="tag">Chinese (HSK3)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="objective">
+        <h2><i class="fas fa-bullseye"></i> 🎯 Career Objective</h2>
+        <p>I aim to pursue a career in import-export or international business, seeking internship opportunities to gain hands-on experience and contribute to business growth.</p>
+    </section>
+
+    <div class="footer">
+        <h2>Get In Touch</h2>
+        <p>I am seeking internship opportunities to contribute and grow.</p>
+        <a href="mailto:nguyenthinganbibi@gmail.com" class="btn-contact"><i class="fas fa-envelope"></i> Email Me</a>
+        <a href="tel:0975544721" class="btn-contact"><i class="fas fa-phone"></i> Call Me</a>
+        <p style="margin-top: 25px; font-size: 0.8rem;">© 2024 by Nguyễn Thị Ngân</p>
+    </div>
+</div>
+
+</body>
+</html>
