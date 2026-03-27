@@ -3,202 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thị Ngân | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Nguyễn Thị Ngân | Professional Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         :root {
-            --bg: #0a0a0a;          /* Đen sâu thẳm */
-            --accent: #8b0000;      /* Đỏ rượu vang trầm cực sang */
-            --text-gold: #d4af37;   /* Vàng đồng nhạt cho điểm nhấn nhỏ */
-            --text-main: #e0e0e0;   /* Trắng ngà dịu mắt */
-            --line: rgba(255, 255, 255, 0.1);
+            /* BẢNG MÀU HỒNG SANG TRỌNG & HIỆN ĐẠI */
+            --rose-deep: #a66d6d;   /* Hồng đất đậm cho tiêu đề (rất sang) */
+            --rose-main: #d4a5a5;   /* Hồng khô chủ đạo */
+            --rose-bg: #fdf2f2;     /* Nền hồng kem phấn (đậm hơn bản cũ, không bị trắng) */
+            --white: #ffffff;
+            --text-main: #4a3f3f;   /* Chữ màu nâu xám trầm hợp với tông hồng */
+            --text-sub: #7a6b6b;
         }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .wrapper { max-width: 1000px; margin: 0 auto; padding: 100px 40px; }
-
-        /* Header sang trọng kiểu Magazine */
-        header {
-            border-bottom: 1px solid var(--line);
-            padding-bottom: 60px;
-            margin-bottom: 80px;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .profile-wrap { position: relative; }
-        .profile-img {
-            width: 220px;
-            height: 280px;
-            object-fit: cover;
-            filter: grayscale(100%); /* Ảnh đen trắng cho sang */
-            transition: 0.5s;
-            border: 1px solid var(--line);
-        }
-        .profile-img:hover { filter: grayscale(0%); }
-
-        .header-text h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
-            margin: 0;
-            line-height: 1;
-            font-weight: 600;
-            letter-spacing: -1px;
-        }
-
-        .header-text p {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: var(--accent);
-            margin-top: 15px;
-        }
-
-        /* Section tối giản */
-        section { margin-bottom: 120px; }
         
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--accent);
-            display: inline-block;
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--rose-bg); /* Nền đã hồng hơn rồi nhé */
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Bố cục Grid mới */
-        .grid-info {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            border-bottom: 1px solid var(--line);
-            padding: 30px 0;
+        .container { max-width: 880px; margin: 0 auto; padding: 50px 20px; }
+
+        /* Header tinh tế */
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: var(--white);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(166, 109, 109, 0.1); 
+            margin-bottom: 50px;
+            border: 1px solid rgba(212, 165, 165, 0.2);
         }
 
-        .label {
-            font-size: 0.8rem;
+        .profile-img {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            border: 6px solid var(--rose-bg);
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            color: var(--rose-deep);
+            letter-spacing: 1px;
             text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        header p {
+            color: var(--rose-main);
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1.1rem;
             letter-spacing: 2px;
-            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        /* Section layout */
+        section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(212, 165, 165, 0.1);
+        }
+
+        h2 {
+            color: var(--rose-deep);
+            font-size: 1.4rem;
+            border-left: 5px solid var(--rose-main);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Skills: Tag bo tròn cực xinh */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+        }
+
+        .skill-group h4 {
+            color: var(--rose-deep);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--rose-bg);
+            padding-bottom: 8px;
             font-weight: 600;
         }
 
-        /* Kỹ năng kiểu Minimal */
-        .skill-list {
+        .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px 40px;
-        }
-        .skill-item {
-            font-size: 1.1rem;
-            position: relative;
-        }
-        .skill-item::before {
-            content: "/";
-            margin-right: 10px;
-            color: var(--accent);
+            gap: 10px;
         }
 
-        /* Dự án nhấn mạnh vào Typography */
-        .project-row {
-            padding: 40px 0;
-            border-bottom: 1px solid var(--line);
+        .tag {
+            background: var(--rose-bg); 
+            color: var(--rose-deep);
+            padding: 8px 16px;
+            border-radius: 12px; /* Bo góc hiện đại hơn */
+            font-size: 0.85rem;
+            border: 1px solid transparent;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: var(--rose-main);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 165, 165, 0.4);
+        }
+
+        /* Info blocks */
+        .info-block { margin-bottom: 20px; }
+        .flex-row { 
+            display: flex; 
+            justify-content: space-between; 
+            font-weight: 700; 
+            color: var(--rose-deep); 
+        }
+        
+        .project-card {
+            border: 1px solid var(--rose-bg);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
             transition: 0.3s;
         }
-        .project-row:hover { background: rgba(255,255,255,0.02); }
-        .project-row h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 0; }
-        .project-row p { color: #888; font-size: 0.9rem; margin: 10px 0 0; }
+        .project-card:hover { 
+            border-color: var(--rose-main); 
+            background: #fffcfc;
+            transform: scale(1.01);
+        }
+        .project-card h3 { color: var(--rose-main); margin-top: 0; font-size: 1.15rem; }
 
-        /* Footer */
-        footer {
-            margin-top: 150px;
+        /* Footer hồng đậm đà */
+        .footer {
             text-align: center;
-            border-top: 1px solid var(--line);
-            padding-top: 80px;
+            padding: 60px 20px;
+            background: var(--rose-deep);
+            color: var(--white);
+            border-radius: 40px;
+            box-shadow: 0 10px 30px rgba(166, 109, 109, 0.3);
         }
-
-        .contact-link {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color: var(--text-main);
-            text-decoration: none;
+        .footer h3 { margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .footer a { 
+            color: var(--white); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: 600; 
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
             transition: 0.3s;
         }
-        .contact-link:hover { color: var(--accent); font-style: italic; }
+        .footer a:hover { background: var(--white); color: var(--rose-deep); }
 
-        @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            .header-text h1 { font-size: 2.5rem; }
-            .grid-info { grid-template-columns: 1fr; }
+        @media (max-width: 600px) {
+            .flex-row { flex-direction: column; }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="wrapper">
+<div class="container">
     <header>
-        <div class="profile-wrap">
-            <img src="avatar.jpg" alt="Ngân" class="profile-img">
-        </div>
-        <div class="header-text">
-            <h1>Nguyễn Thị Ngân</h1>
-            <p>International Business</p>
-        </div>
+        <img src="avatar.jpg" alt="Nguyễn Thị Ngân" class="profile-img">
+        <h1>Nguyễn Thị Ngân</h1>
+        <p>International Business | FTU</p>
     </header>
 
     <section id="about">
-        <div class="grid-info">
-            <div class="label">Brief</div>
-            <div>
-                An International Business student at Foreign Trade University (FTU). 
-                Dedicated to excellence in global trade and market strategy.
+        <h2>About Me</h2>
+        <p>I am Nguyễn Thị Ngân, an International Business student at Foreign Trade University (2024–2028). I am a responsible, detail-oriented, and fast-learning individual who is eager to gain practical experience in a dynamic working environment.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="info-block">
+            <div class="flex-row">
+                <span>Foreign Trade University (FTU)</span>
+                <span>2024 – 2028</span>
             </div>
+            <p>Major: International Business</p>
         </div>
     </section>
 
     <section id="skills">
-        <h2 class="section-title">Expertise</h2>
-        <div class="skill-list">
-            <div class="skill-item">Market Research</div>
-            <div class="skill-item">Business Analysis</div>
-            <div class="skill-item">Excel Modeling</div>
-            <div class="skill-item">English Proficiency</div>
-            <div class="skill-item">Chinese HSK3</div>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <h4>Professional</h4>
+                <div class="tags">
+                    <span class="tag">Microsoft Excel</span>
+                    <span class="tag">Market Research</span>
+                    <span class="tag">PowerPoint</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Languages</h4>
+                <div class="tags">
+                    <span class="tag">English</span>
+                    <span class="tag">Chinese (HSK3)</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Soft Skills</h4>
+                <div class="tags">
+                    <span class="tag">Communication</span>
+                    <span class="tag">Teamwork</span>
+                    <span class="tag">Time management</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-title">Selected Works</h2>
-        
-        <div class="project-row">
-            <h3>English Up! Initiative</h3>
-            <p>Professional communication & presentation strategy.</p>
+        <h2>Key Projects</h2>
+        <div class="project-card">
+            <h3>🌍 English Up! Project</h3>
+            <p>Participated in improving professional English communication and business presentation skills.</p>
         </div>
-
-        <div class="project-row">
-            <h3>Miliket Brand Pivot</h3>
-            <p>Strategic brand repositioning for a traditional market leader.</p>
-        </div>
-
-        <div class="project-row">
-            <h3>Vinh Hoan Corp Analysis</h3>
-            <p>Comprehensive research on export dynamics & financial growth.</p>
+        <div class="project-card">
+            <h3>🍜 Brand Repositioning – Miliket</h3>
+            <p>Analyzing brand image and proposing new strategies for Miliket repositioning.</p>
         </div>
     </section>
 
-    <footer>
-        <div class="label" style="margin-bottom: 20px;">Get in touch</div>
-        <a href="mailto:nguyenthinganbibi@gmail.com" class="contact-link">nguyenthinganbibi@gmail.com</a>
-        <p style="margin-top: 60px; font-size: 0.7rem; opacity: 0.4; letter-spacing: 3px;">© 2026 NGUYEN THI NGAN</p>
-    </footer>
+    <div class="footer">
+        <h3>Connect With Me</h3>
+        <p style="margin-bottom: 25px;">
+            <a href="mailto:nguyenthinganbibi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:0975544721"><i class="fas fa-phone"></i> 0975 544 721</a>
+        </p>
+        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.8;">© 2026 Nguyễn Thị Ngân. FTU Student.</p>
+    </div>
 </div>
 
 </body>
