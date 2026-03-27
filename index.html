@@ -1,252 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thị Ngân | Portfolio</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <title>Nguyễn Thị Ngân - FTU International Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            /* Tông màu hồng kem đậm đà & chanh sả */
-            --rose-deep: #880e4f;   /* Tiêu đề chính */
-            --rose-mid: #ad1457;    /* Điểm nhấn & Menu hover */
-            --rose-bg: #fce4ec;     /* Nền hồng kem toàn trang */
-            --white: #ffffff;
-            --text-main: #3d3d3d;
-            --nav-bg: rgba(255, 255, 255, 0.9); /* Nền menu trong suốt nhẹ */
-        }
-        
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--rose-bg);
-            color: var(--text-main);
-            line-height: 1.7;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f7d9e1; /* Màu hồng nền */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        /* --- THANH MENU ĐIỀU HƯỚNG (GIỐNG ẢNH M GỬI) --- */
-        nav {
-            background: var(--nav-bg);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(136, 14, 79, 0.1);
-            backdrop-filter: blur(5px);
+        .container {
+            background-color: #fff; /* Màu nền nội dung */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        nav a {
-            text-decoration: none;
-            color: var(--rose-deep);
-            font-weight: 600;
-            margin: 0 20px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--rose-mid);
-            border-bottom: 2px solid var(--rose-mid);
-        }
-
-        .container { max-width: 880px; margin: 0 auto; padding: 40px 20px; }
-
-        /* Header chuyên nghiệp */
-        header {
+        .footer {
+            background-color: #a33161; /* Màu hồng đậm cho footer */
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 80px 20px;
-            background: var(--white);
-            border-radius: 40px;
-            box-shadow: 0 15px 40px rgba(136, 14, 79, 0.08); 
-            margin-bottom: 50px;
-            margin-top: 20px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid var(--rose-bg);
-            object-fit: cover;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: var(--rose-deep);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        header p {
-            color: var(--rose-mid);
-            font-weight: 600;
-            margin-top: 10px;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
-
-        /* Section layout */
-        section {
-            background: var(--white);
-            padding: 45px;
-            border-radius: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            border: 1px solid rgba(173, 20, 87, 0.05);
-        }
-
-        h2 {
-            color: var(--rose-deep);
-            font-size: 1.4rem;
-            border-left: 6px solid var(--rose-mid);
-            padding-left: 20px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        /* Dự án & Học vấn */
-        .info-block { margin-bottom: 25px; }
-        .flex-row { display: flex; justify-content: space-between; font-weight: 700; color: var(--rose-deep); }
-
-        .project-card {
-            border: 1px solid #fce4ec;
-            padding: 25px;
             border-radius: 20px;
-            margin-bottom: 25px;
-            transition: 0.3s ease;
-        }
-        .project-card:hover { 
-            border-color: var(--rose-mid); 
-            background: #fffafa;
-            transform: translateY(-5px);
-        }
-        .project-card h3 { color: var(--rose-mid); margin-top: 0; font-size: 1.2rem; }
-
-        /* Skills Tags */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-        .tag {
-            background: var(--rose-bg);
-            color: var(--rose-deep);
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid transparent;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            background: var(--rose-deep);
-            color: var(--white);
-            border-radius: 40px 40px 0 0;
-            margin-top: 60px;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
         }
-        footer a { color: var(--white); text-decoration: none; margin: 0 15px; font-weight: 600; }
 
-        @media (max-width: 600px) {
-            nav a { margin: 0 10px; font-size: 0.8rem; }
-            .flex-row { flex-direction: column; }
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
     </style>
 </head>
 <body>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-    <header>
-        <img src="avatar.jpg" alt="Nguyễn Thị Ngân" class="profile-img">
-        <h1>Nguyễn Thị Ngân</h1>
-        <p>International Business Student | FTU</p>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am Nguyễn Thị Ngân, an International Business student at Foreign Trade University (2024–2028). I have a strong interest in import-export and global trade. I am a responsible, detail-oriented, and fast-learning individual who is eager to gain practical experience in a dynamic working environment.</p>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="info-block">
-            <div class="flex-row">
-                <span>Foreign Trade University (FTU)</span>
-                <span>2024 – 2028</span>
+    <div class="container">
+        <div class="header">
             </div>
-            <p>Major: International Business</p>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h2>Key Projects</h2>
-        <div class="project-card">
-            <h3>🌍 English Up! Project</h3>
-            <p>Improving professional English communication, business presentation, and teamwork development.</p>
-        </div>
-        <div class="project-card">
-            <h3>🍜 Brand Repositioning – Miliket</h3>
-            <p>Market research and strategic planning to modernize the legendary "Miliket" brand image.</p>
-        </div>
-        <div class="project-card">
-            <h3>🐟 Business Research – Vinh Hoan Corporation</h3>
-            <p>Evaluation of export operations and global growth potential of the seafood industry leader.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-group">
-                <h4 style="color: var(--rose-deep);">Hard Skills</h4>
-                <div class="tags">
-                    <span class="tag">Microsoft Excel</span>
-                    <span class="tag">Market Research</span>
-                    <span class="tag">Data Analysis</span>
-                </div>
+        <div class="footer">
+            <p>Let's Connect</p>
+            <div class="contact-info">
+                <a href="mailto:nguyenthingan bibi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="tel:0975544721"><i class="fas fa-phone"></i> 0975 544 721</a>
             </div>
-            <div class="skill-group">
-                <h4 style="color: var(--rose-deep);">Languages</h4>
-                <div class="tags">
-                    <span class="tag">English</span>
-                    <span class="tag">Chinese (HSK3)</span>
-                </div>
-            </div>
+            <p>© 2026 Nguyễn Thị Ngân. FTU International Business.</p>
         </div>
-    </section>
-
-    <footer id="contact">
-        <h3>Let's Connect</h3>
-        <div style="margin: 25px 0;">
-            <a href="mailto:nguyenthinganbibi@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="tel:0975544721"><i class="fas fa-phone"></i> 0975 544 721</a>
-        </div>
-        <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 Nguyễn Thị Ngân. FTU International Business.</p>
-    </footer>
-</div>
-
+    </div>
 </body>
 </html>
