@@ -7,11 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         :root {
-            /* TÔNG MÀU HỒNG ĐẬM SANG TRỌNG */
-            --rose-bg: #fce4ec;      /* Nền hồng phấn rõ rệt */
-            --rose-card: #ffffff;    /* Trắng cho các khối nội dung */
-            --rose-dark: #880e4f;    /* Hồng rượu cực đậm (Thay cho cánh sen) */
-            --rose-accent: #ad1457;  /* Hồng đậm làm điểm nhấn */
+            /* TÔNG MÀU HỒNG RƯỢU SANG TRỌNG */
+            --rose-bg: #fce4ec;      /* Nền hồng phấn */
+            --rose-card: #ffffff;    /* Khối nội dung trắng */
+            --rose-dark: #880e4f;    /* Hồng rượu đậm cho tiêu đề */
+            --rose-accent: #ad1457;  /* Hồng điểm nhấn */
             --text-main: #2d2d2d;
         }
 
@@ -25,10 +25,10 @@
             padding: 0;
         }
 
-        /* Menu điều hướng */
+        /* Menu điều hướng theo ảnh m gửi */
         nav {
             background: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -40,31 +40,31 @@
             text-decoration: none;
             color: var(--rose-dark);
             font-weight: 700;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 0.9rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .container { max-width: 850px; margin: 30px auto; padding: 0 20px; }
 
-        /* Header giống ảnh Ngân gửi */
+        /* Header chanh sả */
         header {
             background: var(--rose-card);
             padding: 60px 20px;
-            border-radius: 30px;
+            border-radius: 35px;
             text-align: center;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(136, 14, 79, 0.05);
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             border: 5px solid var(--rose-bg);
             object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
         }
 
         header h1 {
@@ -78,33 +78,31 @@
         header p {
             color: var(--rose-accent);
             font-weight: 600;
-            font-size: 1.1rem;
             margin-top: 10px;
         }
 
-        /* Section chung */
+        /* Section nội dung */
         section {
             background: var(--rose-card);
             padding: 40px;
-            border-radius: 25px;
-            margin-bottom: 25px;
+            border-radius: 30px;
+            margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
 
         h2 {
             color: var(--rose-dark);
             font-size: 1.4rem;
-            border-left: 5px solid var(--rose-accent);
+            border-left: 6px solid var(--rose-accent);
             padding-left: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-transform: uppercase;
         }
 
-        /* Education & Project Row */
+        /* Education & Projects */
         .flex-row {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             font-weight: 800;
             color: var(--rose-dark);
             margin-bottom: 10px;
@@ -112,71 +110,67 @@
 
         .project-card {
             border: 1px solid #f8bbd0;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 20px;
             margin-bottom: 20px;
             transition: 0.3s;
         }
 
-        .project-card:hover {
-            border-color: var(--rose-accent);
-            background: #fffcfd;
+        .project-card h3 { color: var(--rose-accent); margin-top: 0; }
+
+        /* Skills chia rõ ràng */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
         }
 
-        .project-card h3 {
-            color: var(--rose-accent);
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .skill-group h4 {
+            color: var(--rose-dark);
+            border-bottom: 2px solid var(--rose-bg);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* Skills */
         .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
         .tag {
             background: var(--rose-bg);
             color: var(--rose-dark);
-            padding: 8px 15px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
             font-size: 0.85rem;
         }
 
-        /* Footer Đậm & Đẹp (Có Email đầy đủ) */
+        /* Footer đầy đủ Email */
         footer {
             background: var(--rose-dark);
             color: white;
             padding: 60px 20px;
-            border-radius: 30px;
+            border-radius: 35px;
             text-align: center;
-            margin-top: 50px;
         }
-
-        footer h3 { font-size: 1.8rem; margin-bottom: 30px; }
 
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
 
         .contact-links a {
             color: white;
             text-decoration: none;
-            font-size: 1.1rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .contact-links a:hover { opacity: 0.8; }
-
         @media (max-width: 600px) {
-            .flex-row { flex-direction: column; align-items: flex-start; }
-            header h1 { font-size: 1.8rem; }
+            .flex-row { flex-direction: column; }
+            nav a { margin: 0 10px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -198,12 +192,12 @@
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>ABOUT ME</h2>
         <p>I am Nguyễn Thị Ngân, an International Business student at Foreign Trade University (2024–2028). I have a strong interest in import-export and global trade. I am currently developing my skills in market research, data analysis, and foreign languages to prepare for a professional career in international business.</p>
     </section>
 
     <section id="education">
-        <h2>Education</h2>
+        <h2>EDUCATION</h2>
         <div class="info-block">
             <div class="flex-row">
                 <span>Foreign Trade University (FTU)</span>
@@ -214,7 +208,7 @@
     </section>
 
     <section id="projects">
-        <h2>Key Projects</h2>
+        <h2>KEY PROJECTS</h2>
         <div class="project-card">
             <h3>🌍 English Up! Project</h3>
             <p>Participated in improving professional English communication and business presentation skills.</p>
@@ -230,13 +224,29 @@
     </section>
 
     <section id="skills">
-        <h2>Skills</h2>
-        <div class="tags">
-            <span class="tag">Excel Analysis</span>
-            <span class="tag">Market Research</span>
-            <span class="tag">English</span>
-            <span class="tag">Chinese (HSK3)</span>
-            <span class="tag">Teamwork</span>
+        <h2>SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>Hard Skills</h4>
+                <div class="tags">
+                    <span class="tag">Excel Analysis</span>
+                    <span class="tag">Market Research</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Languages</h4>
+                <div class="tags">
+                    <span class="tag">English</span>
+                    <span class="tag">Chinese (HSK3)</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4>Soft Skills</h4>
+                <div class="tags">
+                    <span class="tag">Teamwork</span>
+                    <span class="tag">Communication</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -246,7 +256,7 @@
             <a href="mailto:nguyenthinganbibi@gmail.com"><i class="fas fa-envelope"></i> nguyenthinganbibi@gmail.com</a>
             <a href="tel:0975544721"><i class="fas fa-phone"></i> 0975 544 721</a>
         </div>
-        <p style="opacity: 0.6; font-size: 0.8rem;">© 2026 Nguyễn Thị Ngân. FTU International Business Student.</p>
+        <p style="opacity: 0.7; font-size: 0.8rem;">© 2026 Nguyễn Thị Ngân. FTU Student Portfolio.</p>
     </footer>
 </div>
 
